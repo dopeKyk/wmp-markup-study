@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>과제</title>
+  <style>
+    *{margin:0;padding:0}
+    #wrap{
+      margin:30px;
+      padding:15px;
+      border:10px groove #ddd;
+    }
+    hr{
+      margin:50px 0;
+    }
+    h1,h2{
+      margin:20px 0;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>과제</h1>
+
+    <h2>문제1.</h2>
+    <span class="box">
+      이 박스(.box)에
+      width:200px,
+      height:100px,
+      컨텐츠(텍스트)는 좌우 가운데로 정렬해주세요
+      padding:10px 선언하여 컨텐츠 가로와 세로 크기의 합이 200px/100px이 되도록 해주세요
+      넘치는 텍스트는 모두 확인가능하도록 해주세요
+    </span>
+    <style>
+      .box{
+        background-color:aqua;
+      }
+    </style>
+    <hr>
+
+    <h2>문제2.</h2>
+    <div class="box2">
+      이 박스(.box2)는 블럭레벨 요소인 div로 마크업되어 있습니다.
+      css를 이용하여 인라인레벨로 표현해주세요. padding은 상하좌우 15px로 선언해주세요.
+      (border도 선언해주세요, border:1px solid #ddd, border-style:;, border-width:;등등)
+    </div>
+    <style>
+      .box2{
+
+      }
+    </style>
+    <hr>
+
+    <h2>문제3.</h2>
+    <span class="u-chkbox">
+      <input type="checkbox" id="">
+      <label for="">전체선택</label>
+    </span>
+    <style>
+      /*
+      input[type=checkbox]의 id와 label의 for값을 일치시켜주세요.
+      label의 텍스트컬러는 red로 선언, font-size는 12px로 선언.
+      input[type=checkbox]를 절대좌표(absolute)로 .u-chkbox기준 top:0;left:0;으로 선언.
+      input[type=checkbox]를 영역은 갖고 있되 화면에서만 보이지 않게 처리해주세요
+      */
+    </style>
+    <hr>
+
+    <h2>문제4.</h2>
+    <p>#wrap의 최대 가로폭을 750px로 제한하고, 뷰포트의 센터로 정렬해주세요</p>
+    <style>
+    </style>
+    <hr>
+
+    <h2>문제5.</h2>
+    <p class="box3">.box3의 텍스트 사이즈를 14px로 선언하고, 텍스트 굵기를 bold체로, 글꼴은 맑은고딕으로 선언, 글자간의 간격(letter-spacing)은 -.5px, 행간(line-height)은 15px로 선언</p>
+    <style>
+      .box3{
+        padding:10px;
+        border:1px dashed rgba(0,0,0,.5);
+      }
+    </style>
+    <hr>
+
+    <h2>문제6.</h2>
+    <p>
+      .lst-menu의 width를 300px로, border는 2px solid #999로 <br>
+      .lst-menu의 메뉴를 float을 사용하지 않고 가로방향으로 나열해주세요 <br>
+      메뉴가 컨테이닝 블럭보다 커서 넘쳐도 줄바꿈되지 않도록해주시고, 넘치는 부분은 가로 스크롤로 확인가능하도록 해주세요 <br>
+      a요소에 선언된 스타일 중 요소의 크기가 의도한대로 적용되도록 해주세요
+    </p>
+    <ul class="lst-menu">
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+      <li><a href="">메뉴5</a></li>
+    </ul>
+    <style>
+      ul{list-style:none}
+      .lst-menu li{
+        border-left:1px solid #999;
+      }
+      .lst-menu a{
+        width:80px;
+        height:30px;
+        text-align:center;
+        line-height:30px;
+        font-size:12px;
+        color:#666;
+        text-decoration: none;/*underline삭제*/
+      }
+    </style>
+    <hr>
+
+    <h2>문제7.</h2>
+    <p style="padding-bottom:30px;">.body-price의 가격(숫자)의 글자크기를 22px로 하고, '원'이 숫자기준 상하중앙으로 정렬되도록-vertical-align사용-해주세요</p>
+    <dl class="body-price">
+      <dt>손흥민 몸값</dt>
+      <dd>
+        120,000,000,000원
+      </dd>
+    </dl>
+    <style>
+      .body-price dt{
+        font-size:18px;
+        color:#333;
+      }
+      .body-price dd{
+        font-size:14px;
+      }
+      .body-price span{
+      
+      }
+    </style>
+    <hr>
+
+    <h2>문제8.</h2>
+    <p style="padding-bottom:30px">아래 컨텐츠의 '주요활동분야'의 내용이 툴팁영역입니다. dt에 컨테이닝블럭 하단기준으로 주요활동분야 글씨가 보이도록 absolute처리해주세요, 할 수 있다면 툴팁박스 기본 display:none처리하고 dt에 마우스 롤오버시 보이도록 처리해주세요</p>
+    <dl class="tooltip">
+      <dt>주요활동분야</dt>
+      <dd>
+        주요활동분야는 회원님의 전문분야를 알려주기 위한<br>목적으로, <em>채택답변이 5개</em> 인 상세 디렉토리를 기준으로<br> 자동으로 생성되며, <em>매주 월요일</em> 업데이트 됩니다
+      </dd>
+    </dl>
+    <style>
+      .tooltip{
+
+      }
+      .tooltip dd{
+        padding:10px;
+        border:1px solid #e4e4e4;
+        font-size:12px;
+      }
+    </style>
+  </div>
+</body>
+</html>

@@ -7,14 +7,6 @@
   <title>과제</title>
   <style>
     *{margin:0;padding:0}
-    #wrap{
-      margin: auto;
-      padding:15px;
-      border:10px groove #ddd;
-      max-width: 750px;
-      position: relative;
-      
-    }
     hr{
       margin:50px 0;
     }
@@ -39,11 +31,14 @@
     </span>
     <style>
       .box{
+				display: inline-block;
+				overflow: auto;
         background-color:aqua;
         width: 200px;
         height: 100px;
-        /*padding: 10px;*/
-        /*text-align: center;*/
+        padding: 10px;
+        text-align: center;
+				box-sizing: border-box;
       }
     </style>
     <hr>
@@ -58,15 +53,15 @@
       .box2{
         border:1px solid #ddd;
         padding: 15px;
-        display: inline-block;
+        display: inline;
       }
     </style>
     <hr>
 
     <h2>문제3.</h2>
     <span class="u-chkbox">
-      <input type="checkbox" id="">
-      <label for="">전체선택</label>
+      <input type="checkbox" id="chkAll">
+      <label for="chkAll">전체선택</label>
     </span>
     <style>
       /*
@@ -81,7 +76,15 @@
     <h2>문제4.</h2>
     <p>#wrap의 최대 가로폭을 750px로 제한하고, 뷰포트의 센터로 정렬해주세요</p>
     <style>
-    </style>
+			#wrap{
+				margin: auto;
+				padding:15px;
+				border:10px groove #ddd;
+				max-width: 750px;
+				/*max-width: none; 해제시*/
+				position: relative;
+			}
+		</style>
     <hr>
 
     <h2>문제5.</h2>
@@ -122,13 +125,17 @@
         white-space:nowrap;
       }
       .lst-menu li{
-        display: inline-flex;
+        display: inline-block;
+				text-align:center;
+				width:80px;
+				height:30px;
         border-left:1px solid #999;
+				margin-left: -1px;
       }
       .lst-menu a{
-        width:80px;
-        height:30px;
-        text-align:center;
+        /*width:80px;*/
+        /*height:30px;*/
+        /*text-align:center;*/
         line-height:30px;
         font-size:12px;
         color:#666;
